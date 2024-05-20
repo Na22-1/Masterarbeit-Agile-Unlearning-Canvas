@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.modal-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.modal-content li {
+    margin: 5px 0;
+    list-style-type: disc;
+}
+
+ul.list-inline li {
+    font-size: 20px; /* Adjust the font size here */
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+    background: transparent;
+    width: 55%;
+    margin-right: 10px;
+    font-size: inherit;
+    text-align: center;
+    outline: none;
+    font-family: Georgia, serif;
+}
+
+.infoBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.list-inline {
+    list-style-position: inside;
+}
+
+.section {
+    padding: 20px 40px;
+}
+
+.section__header {
+    text-align: center;
+    background-color: #8fc1d0;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.section__content {
+    display: grid;
+    grid-template-rows: minmax(504px, min-content) 100px minmax(150px, min-content);
+}
+
+.section__content-1 {
+    display: grid;
+    grid-template-rows: minmax(504px, min-content);
+    grid-template-columns: 3fr 100px 12fr;
+}
+
+.left__container,
+.main__panel__containers,
+.bottom__container {
+    padding: 10px;
+    position: relative;
+}
+
+.left__container {
+    border: 4px solid black;
+    background-color: rgba(204, 201, 201, 0.51);
+    padding: 10px;
+    position: relative;
+}
+
+.main__panel {
+    background-color: rgba(204, 201, 201, 0.51);
+    display: grid;
+    grid-template-rows: repeat(6, minmax(84px, min-content));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "container-1 container-2 container-8"
+                        "container-1 container-2 container-8"
+                        "container-1 container-4 container-3"
+                        "container-5 container-4 container-3"
+                        "container-5 container-7 container-6"
+                        "container-5 container-7 container-6";
+    align-self: start;
+    border: 4px solid #170202;
+}
+
+.container-1 {
+    grid-area: container-1;
+    border-bottom: dashed;
+    border-right: 4px solid;
+}
+
+.container-5 {
+    grid-area: container-5;
+    border-right: 4px solid;
+}
+
+.container-2 {
+    grid-area: container-2;
+    border-right: 4px solid;
+    border-bottom: solid;
+}
+
+.container-4 {
+    grid-area: container-4;
+    border-bottom: dashed;
+    border-right: 4px solid;
+}
+
+.container-7 {
+    grid-area: container-7;
+    border-right: 4px solid;
+}
+
+.container-3 {
+    grid-area: container-3;
+    border-bottom: solid;
+}
+
+.container-6 {
+    grid-area: container-6;
+}
+.container-8 {
+    grid-area: container-8;
+    border-bottom: solid;
+}
+.main__panel__containers {
+    border-color: black;
+    position: relative;
+}
+
+.bottom__container {
+    background-color: rgba(204, 201, 201, 0.51);
+    border: 4px solid black;
+    padding: 10px;
+    position: relative;
+}
+
+.container__text {
+    text-align: center;
+    font-size: 25px;
+}
+
+.image__container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.image__container img {
+    width: 40px;
+    height: 40px;
+}
+
+.image__container_numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image__container_numbers img {
+    color: rgba(0, 0, 0, 0.53);
+    width: 30px;
+    height: 30px;
+}
+
+.gap__container {
+    position: relative;
+}
+
+.gap__container-image {
+    width: max-content;
+    position: absolute;
+}
+
+.gap__container-image-1 {
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gap__container-image-2 {
+    left: 80px;
+    bottom: 50%;
+    transform: rotate(-90deg) translateX(-30%);
+}
+
+.gap__container-image-3 {
+    right: 130px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-30%);
+}
+
+.gap__container-image img {
+    width: 90px;
+}
